@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const categories = ['Todos', 'Proteína', 'Rendimiento', 'Bienestar'] as const;
 type Category = (typeof categories)[number];
 
@@ -50,7 +52,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Elite Performance Nutrition, inicio">
-          <span className="brand-logo"><Image src="/elite-logo.png" alt="" width={46} height={46} /></span>
+          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo.png`} alt="" width={46} height={46} /></span>
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <nav aria-label="Navegación principal">
@@ -80,7 +82,7 @@ export default function Home() {
         </div>
 
         <div className="hero-visual" aria-label="Proteína deportiva y cuchara medidora">
-          <Image src="/hero-protein.jpg" alt="Bote de proteína deportiva con cuchara medidora" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
+          <Image src={`${assetBasePath}/hero-protein.jpg`} alt="Bote de proteína deportiva con cuchara medidora" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
           <div className="hero-gradient" />
           <p className="image-note"><span>01</span> COMBUSTIBLE PARA TU PROGRESO</p>
           <div className="availability"><span /> DISPONIBLE</div>
@@ -202,7 +204,7 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-brand" href="#inicio" aria-label="Elite Performance Nutrition, inicio">
-          <span className="brand-logo"><Image src="/elite-logo.png" alt="" width={46} height={46} /></span>
+          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo.png`} alt="" width={46} height={46} /></span>
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <p>Suplementos para entrenar, rendir y recuperarte.</p>
