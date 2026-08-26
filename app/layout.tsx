@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+const defaultSiteUrl = 'https://impulso-nutrition-hn.vuxoqwlhbdgkfeds.chatgpt.site';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl;
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://impulso-nutrition-hn.vuxoqwlhbdgkfeds.chatgpt.site'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Elite Performance Nutrition | Suplementos en Honduras',
     template: '%s | Elite Performance Nutrition',
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
     locale: 'es_HN',
     siteName: 'Elite Performance Nutrition',
     images: [{
-      url: 'https://impulso-nutrition-hn.vuxoqwlhbdgkfeds.chatgpt.site/og.png',
+      url: `${siteUrl}/og.png`,
       width: 1729,
       height: 910,
       alt: 'Elite Performance Nutrition — Elevá tu rendimiento. Superá tus límites.',
@@ -26,11 +30,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Elite Performance Nutrition',
     description: 'Elevá tu rendimiento. Superá tus límites.',
-    images: ['https://impulso-nutrition-hn.vuxoqwlhbdgkfeds.chatgpt.site/og.png'],
+    images: [`${siteUrl}/og.png`],
   },
   icons: {
-    icon: '/elite-logo.png',
-    apple: '/elite-logo.png',
+    icon: `${assetBasePath}/elite-logo.png`,
+    apple: `${assetBasePath}/elite-logo.png`,
   },
 };
 
