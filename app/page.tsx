@@ -5,29 +5,212 @@ import { useMemo, useState } from 'react';
 
 const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
-const categories = ['Todos', 'Proteína', 'Rendimiento', 'Bienestar'] as const;
+const categories = ['Todos', 'Proteínas', 'Pre-entreno', 'Vitaminas y suplementos', 'Control de peso'] as const;
 type Category = (typeof categories)[number];
 
 const products = [
-  { name: 'Whey Protein', category: 'Proteína', note: '24 g de proteína', size: '2 lb · 28 porciones', price: 'L 1,390', tone: 'lime', badge: 'Más vendido' },
-  { name: 'Creatina Mono', category: 'Rendimiento', note: 'Fuerza y potencia', size: '300 g · 60 porciones', price: 'L 690', tone: 'violet', badge: 'Esencial' },
-  { name: 'Pre-Workout', category: 'Rendimiento', note: 'Energía y enfoque', size: '30 porciones', price: 'L 850', tone: 'orange', badge: 'Intenso' },
-  { name: 'Omega 3', category: 'Bienestar', note: 'Bienestar diario', size: '100 cápsulas', price: 'L 520', tone: 'blue', badge: 'Diario' },
-  { name: 'Magnesio + Zinc', category: 'Bienestar', note: 'Descanso y recuperación', size: '90 cápsulas', price: 'L 450', tone: 'sand', badge: 'Recuperación' },
-  { name: 'ISO Whey', category: 'Proteína', note: 'Proteína aislada', size: '5 lb · 70 porciones', price: 'L 2,590', tone: 'pink', badge: 'Premium' },
-  { name: 'BCAA + Glutamina', category: 'Rendimiento', note: 'Soporte muscular', size: '30 porciones', price: 'L 760', tone: 'aqua', badge: 'Entrenamiento' },
-  { name: 'Multivitamínico', category: 'Bienestar', note: 'Base nutricional', size: '60 cápsulas', price: 'L 480', tone: 'yellow', badge: 'Completo' },
+  {
+    "name": "Proteina 1 Rule Normal",
+    "category": "Proteínas",
+    "size": "2 Lbs.",
+    "price": "L 1,600",
+    "tone": "lime",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina 1 Rule Normal",
+    "category": "Proteínas",
+    "size": "5 Lbs.",
+    "price": "L 3,000",
+    "tone": "violet",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina Nutrex",
+    "category": "Proteínas",
+    "size": "5 Lbs.",
+    "price": "L 2,800",
+    "tone": "orange",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina Body Fortress",
+    "category": "Proteínas",
+    "size": "6 Lbs.",
+    "price": "L 3,000",
+    "tone": "blue",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina 1 Rule Isolatada",
+    "category": "Proteínas",
+    "size": "2 Lbs.",
+    "price": "L 1,800",
+    "tone": "sand",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina 1 Rule Vegetal",
+    "category": "Proteínas",
+    "size": "2 Lbs.",
+    "price": "L 1,800",
+    "tone": "pink",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Proteina gold standard Mass Gainer",
+    "category": "Proteínas",
+    "size": "6 Lbs.",
+    "price": "L 2,800",
+    "tone": "aqua",
+    "note": "Proteínas",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Pre Entreno C4 Ripedd",
+    "category": "Pre-entreno",
+    "size": "30 Servi.",
+    "price": "L 1,200",
+    "tone": "yellow",
+    "note": "Pre-entreno",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Pre Entreno AMPED 300 MG-Cafeina",
+    "category": "Pre-entreno",
+    "size": "20 Servi.",
+    "price": "L 1,300",
+    "tone": "lime",
+    "note": "Pre-entreno",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Creatina Mh Nutrex",
+    "category": "Vitaminas y suplementos",
+    "size": "30 Servi.",
+    "price": "L 750",
+    "tone": "violet",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Creatina Mh Muscletech 400g",
+    "category": "Vitaminas y suplementos",
+    "size": "80 Servi.",
+    "price": "L 1,200",
+    "tone": "orange",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Colageno 1 Rule",
+    "category": "Vitaminas y suplementos",
+    "size": "20 Servi.",
+    "price": "L 1,100",
+    "tone": "blue",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Magnecio Citrato Now",
+    "category": "Vitaminas y suplementos",
+    "size": "120 Softgel.",
+    "price": "L 800",
+    "tone": "sand",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Zinc Gluconato Now",
+    "category": "Vitaminas y suplementos",
+    "size": "250 Table.",
+    "price": "L 600",
+    "tone": "pink",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Omega 3 Now",
+    "category": "Vitaminas y suplementos",
+    "size": "100 Softgel.",
+    "price": "L 600",
+    "tone": "aqua",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Multi Vitaminas Opti Men",
+    "category": "Vitaminas y suplementos",
+    "size": "90 Table.",
+    "price": "L 1,100",
+    "tone": "yellow",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Multi Vitaminas Opti Women",
+    "category": "Vitaminas y suplementos",
+    "size": "60 Table.",
+    "price": "L 900",
+    "tone": "lime",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Amino Energized",
+    "category": "Vitaminas y suplementos",
+    "size": "30 Servi.",
+    "price": "L 900",
+    "tone": "violet",
+    "note": "Vitaminas y suplementos",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "L- Carnitina Nutrex",
+    "category": "Control de peso",
+    "size": "31 Servi.",
+    "price": "L 800",
+    "tone": "orange",
+    "note": "Control de peso",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "Lipo black 6 Nutrex",
+    "category": "Control de peso",
+    "size": "60 Softgel.",
+    "price": "L 1,000",
+    "tone": "blue",
+    "note": "Control de peso",
+    "badge": "Consultar stock"
+  },
+  {
+    "name": "CLA Nutrex",
+    "category": "Control de peso",
+    "size": "90 Softgel.",
+    "price": "L 700",
+    "tone": "sand",
+    "note": "Control de peso",
+    "badge": "Consultar stock"
+  }
 ];
 
+const productLabel = (product: (typeof products)[number]) => `${product.name} — ${product.size}`;
+
 const goals = [
-  { number: '01', title: 'Ganar masa', copy: 'Proteínas y creatina para acompañar tu plan de fuerza.', filter: 'Proteína' as Category },
-  { number: '02', title: 'Rendir más', copy: 'Energía, enfoque y soporte para cada repetición.', filter: 'Rendimiento' as Category },
-  { number: '03', title: 'Recuperarte', copy: 'Esenciales diarios para descanso y bienestar.', filter: 'Bienestar' as Category },
+  { number: '01', title: 'Ganar masa', copy: 'Proteínas y creatina para acompañar tu plan de fuerza.', filter: 'Proteínas' as Category },
+  { number: '02', title: 'Rendir más', copy: 'Energía, enfoque y soporte para cada repetición.', filter: 'Pre-entreno' as Category },
+  { number: '03', title: 'Recuperarte', copy: 'Esenciales diarios para descanso y bienestar.', filter: 'Vitaminas y suplementos' as Category },
 ];
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>('Todos');
-  const [selectedProduct, setSelectedProduct] = useState('Whey Protein');
+  const [selectedProduct, setSelectedProduct] = useState(productLabel(products[0]));
 
   const filteredProducts = useMemo(
     () => activeCategory === 'Todos' ? products : products.filter((product) => product.category === activeCategory),
@@ -95,7 +278,7 @@ export default function Home() {
             <p className="eyebrow dark"><span /> NUESTRO CATÁLOGO</p>
             <h2>Lo que necesitás.<br /><i>Sin complicaciones.</i></h2>
           </div>
-          <p className="catalog-note">Precios de referencia en lempiras. Consultá disponibilidad y sabores.</p>
+          <p className="catalog-note">Precios en lempiras (HNL). Consultá disponibilidad y sabores.</p>
         </div>
 
         <div className="filter-bar" role="group" aria-label="Filtrar productos">
@@ -114,21 +297,21 @@ export default function Home() {
 
         <div className="product-grid" aria-live="polite">
           {filteredProducts.map((product, index) => (
-            <article className={`product-card ${product.tone}`} key={product.name}>
+            <article className={`product-card ${product.tone}`} key={productLabel(product)}>
               <div className="card-top">
                 <span className="product-number">{(index + 1).toString().padStart(2, '0')}</span>
                 <span className="product-badge">{product.badge}</span>
               </div>
-              <button className="product-visual" type="button" onClick={() => chooseProduct(product.name)} aria-label={`Consultar ${product.name}`}>
+              <button className="product-visual" type="button" onClick={() => chooseProduct(productLabel(product))} aria-label={`Consultar ${productLabel(product)}`}>
                 <span className="product-shadow" />
-                <span className="product-tub"><span>ELITE</span><small>{product.category}</small></span>
+                <span className="product-tub"><span>ELITE</span><small>{product.size}</small></span>
               </button>
               <p>{product.note}</p>
               <h3>{product.name}</h3>
               <span className="size">{product.size}</span>
               <div className="product-footer">
                 <b>{product.price}</b>
-                <button type="button" onClick={() => chooseProduct(product.name)}>Consultar <span>↗</span></button>
+                <button type="button" onClick={() => chooseProduct(productLabel(product))}>Consultar <span>↗</span></button>
               </div>
             </article>
           ))}
@@ -176,7 +359,7 @@ export default function Home() {
         <div className="inquiry-card">
           <label htmlFor="product-select">Producto de interés</label>
           <select id="product-select" value={selectedProduct} onChange={(event) => setSelectedProduct(event.target.value)}>
-            {products.map((product) => <option key={product.name}>{product.name}</option>)}
+            {products.map((product) => <option key={productLabel(product)} value={productLabel(product)}>{productLabel(product)}</option>)}
           </select>
           <div className="message-preview">
             <span>Tu mensaje</span>
@@ -216,4 +399,3 @@ export default function Home() {
     </main>
   );
 }
-
