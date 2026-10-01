@@ -365,10 +365,10 @@ export default function Home() {
             <span>Tu mensaje</span>
             <p>Hola Elite Performance Nutrition, me interesa <b>{selectedProduct}</b>. ¿Me ayudan con disponibilidad, sabores y entrega?</p>
           </div>
-          <a className="button inquiry-button" href={`https://wa.me/?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
-            Preparar en WhatsApp <span>↗</span>
+          <a className="button inquiry-button" href={`https://wa.me/50488203576?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
+            Enviar por WhatsApp <span>↗</span>
           </a>
-          <small>Antes de lanzar, conectaremos aquí el número oficial del negocio.</small>
+          <small>WhatsApp: +504 8820-3576</small>
         </div>
       </section>
 
@@ -391,7 +391,7 @@ export default function Home() {
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <p>Suplementos para entrenar, rendir y recuperarte.</p>
-        <div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="#inicio">Volver arriba ↑</a></div>
+        <div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/elite.nutritionhn/" target="_blank" rel="noreferrer">Instagram @elite.nutritionhn</a><a href="#inicio">Volver arriba ↑</a></div>
         <small>© 2026 Elite Performance Nutrition · Honduras</small>
       </footer>
 
