@@ -16,7 +16,10 @@ const products = [
     "price": "L 1,600",
     "tone": "lime",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-01.webp",
+    "imageAlt": "Foto de referencia de Proteina 1 Rule Normal",
+    "imageNote": null
   },
   {
     "name": "Proteina 1 Rule Normal",
@@ -25,7 +28,10 @@ const products = [
     "price": "L 3,000",
     "tone": "violet",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-02.webp",
+    "imageAlt": "Foto de referencia de Proteina 1 Rule Normal",
+    "imageNote": null
   },
   {
     "name": "Proteina Nutrex",
@@ -34,7 +40,10 @@ const products = [
     "price": "L 2,800",
     "tone": "orange",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-03.webp",
+    "imageAlt": "Foto de referencia de Proteina Nutrex",
+    "imageNote": null
   },
   {
     "name": "Proteina Body Fortress",
@@ -43,7 +52,10 @@ const products = [
     "price": "L 3,000",
     "tone": "blue",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-04.webp",
+    "imageAlt": "Foto de referencia de Proteina Body Fortress",
+    "imageNote": "Foto: envase de 1.78 lb. Consultá la presentación de 6 lb."
   },
   {
     "name": "Proteina 1 Rule Isolatada",
@@ -52,7 +64,10 @@ const products = [
     "price": "L 1,800",
     "tone": "sand",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-05.webp",
+    "imageAlt": "Foto de referencia de Proteina 1 Rule Isolatada",
+    "imageNote": null
   },
   {
     "name": "Proteina 1 Rule Vegetal",
@@ -61,7 +76,10 @@ const products = [
     "price": "L 1,800",
     "tone": "pink",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-06.webp",
+    "imageAlt": "Foto de referencia de Proteina 1 Rule Vegetal",
+    "imageNote": "Foto: envase de 1.48 lb. Confirmá la presentación disponible."
   },
   {
     "name": "Proteina gold standard Mass Gainer",
@@ -70,7 +88,10 @@ const products = [
     "price": "L 2,800",
     "tone": "aqua",
     "note": "Proteínas",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-07.webp",
+    "imageAlt": "Foto de referencia de Proteina gold standard Mass Gainer",
+    "imageNote": "Foto: envase de 5 lb. Confirmá el modelo y la presentación de 6 lb."
   },
   {
     "name": "Pre Entreno C4 Ripedd",
@@ -79,7 +100,10 @@ const products = [
     "price": "L 1,200",
     "tone": "yellow",
     "note": "Pre-entreno",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-08.webp",
+    "imageAlt": "Foto de referencia de Pre Entreno C4 Ripedd",
+    "imageNote": null
   },
   {
     "name": "Pre Entreno AMPED 300 MG-Cafeina",
@@ -88,7 +112,10 @@ const products = [
     "price": "L 1,300",
     "tone": "lime",
     "note": "Pre-entreno",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-09.webp",
+    "imageAlt": "Foto de referencia de Pre Entreno AMPED 300 MG-Cafeina",
+    "imageNote": null
   },
   {
     "name": "Creatina Mh Nutrex",
@@ -97,7 +124,10 @@ const products = [
     "price": "L 750",
     "tone": "violet",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-10.webp",
+    "imageAlt": "Foto de referencia de Creatina Mh Nutrex",
+    "imageNote": null
   },
   {
     "name": "Creatina Mh Muscletech 400g",
@@ -106,7 +136,10 @@ const products = [
     "price": "L 1,200",
     "tone": "orange",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-11.webp",
+    "imageAlt": "Foto de referencia de Creatina Mh Muscletech 400g",
+    "imageNote": null
   },
   {
     "name": "Colageno 1 Rule",
@@ -115,7 +148,10 @@ const products = [
     "price": "L 1,100",
     "tone": "blue",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-12.webp",
+    "imageAlt": "Foto de referencia de Colageno 1 Rule",
+    "imageNote": null
   },
   {
     "name": "Magnecio Citrato Now",
@@ -124,7 +160,10 @@ const products = [
     "price": "L 800",
     "tone": "sand",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-13.webp",
+    "imageAlt": "Foto de referencia de Magnecio Citrato Now",
+    "imageNote": "Foto: 90 cápsulas blandas. Confirmá la presentación de 120."
   },
   {
     "name": "Zinc Gluconato Now",
@@ -133,7 +172,10 @@ const products = [
     "price": "L 600",
     "tone": "pink",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-14.webp",
+    "imageAlt": "Foto de referencia de Zinc Gluconato Now",
+    "imageNote": null
   },
   {
     "name": "Omega 3 Now",
@@ -142,7 +184,10 @@ const products = [
     "price": "L 600",
     "tone": "aqua",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-15.webp",
+    "imageAlt": "Foto de referencia de Omega 3 Now",
+    "imageNote": null
   },
   {
     "name": "Multi Vitaminas Opti Men",
@@ -151,7 +196,10 @@ const products = [
     "price": "L 1,100",
     "tone": "yellow",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-16.webp",
+    "imageAlt": "Foto de referencia de Multi Vitaminas Opti Men",
+    "imageNote": null
   },
   {
     "name": "Multi Vitaminas Opti Women",
@@ -160,7 +208,10 @@ const products = [
     "price": "L 900",
     "tone": "lime",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-17.webp",
+    "imageAlt": "Foto de referencia de Multi Vitaminas Opti Women",
+    "imageNote": "Foto: 60 cápsulas. Confirmá la presentación disponible."
   },
   {
     "name": "Amino Energized",
@@ -169,7 +220,10 @@ const products = [
     "price": "L 900",
     "tone": "violet",
     "note": "Vitaminas y suplementos",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-18.webp",
+    "imageAlt": "Foto de referencia de Amino Energized",
+    "imageNote": "Foto de referencia: Rule 1 Energized Amino."
   },
   {
     "name": "L- Carnitina Nutrex",
@@ -178,7 +232,10 @@ const products = [
     "price": "L 800",
     "tone": "orange",
     "note": "Control de peso",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-19.webp",
+    "imageAlt": "Foto de referencia de L- Carnitina Nutrex",
+    "imageNote": null
   },
   {
     "name": "Lipo black 6 Nutrex",
@@ -187,7 +244,10 @@ const products = [
     "price": "L 1,000",
     "tone": "blue",
     "note": "Control de peso",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-20.webp",
+    "imageAlt": "Foto de referencia de Lipo black 6 Nutrex",
+    "imageNote": null
   },
   {
     "name": "CLA Nutrex",
@@ -196,7 +256,10 @@ const products = [
     "price": "L 700",
     "tone": "sand",
     "note": "Control de peso",
-    "badge": "Consultar stock"
+    "badge": "Consultar stock",
+    "image": "/products/product-21.webp",
+    "imageAlt": "Foto de referencia de CLA Nutrex",
+    "imageNote": null
   }
 ];
 
@@ -278,7 +341,7 @@ export default function Home() {
             <p className="eyebrow dark"><span /> NUESTRO CATÁLOGO</p>
             <h2>Lo que necesitás.<br /><i>Sin complicaciones.</i></h2>
           </div>
-          <p className="catalog-note">Precios en lempiras (HNL). Consultá disponibilidad y sabores.</p>
+          <p className="catalog-note">Precios en lempiras (HNL). Consultá disponibilidad y sabores. Las fotos son de referencia; el sabor y el empaque pueden variar.</p>
         </div>
 
         <div className="filter-bar" role="group" aria-label="Filtrar productos">
@@ -286,6 +349,7 @@ export default function Home() {
             <button
               className={activeCategory === category ? 'active' : ''}
               key={category}
+              aria-pressed={activeCategory === category}
               onClick={() => setActiveCategory(category)}
               type="button"
             >
@@ -303,9 +367,16 @@ export default function Home() {
                 <span className="product-badge">{product.badge}</span>
               </div>
               <button className="product-visual" type="button" onClick={() => chooseProduct(productLabel(product))} aria-label={`Consultar ${productLabel(product)}`}>
-                <span className="product-shadow" />
-                <span className="product-tub"><span>ELITE</span><small>{product.size}</small></span>
+                <Image
+                  className="product-photo"
+                  src={`${assetBasePath}${product.image}`}
+                  alt={product.imageAlt}
+                  width={800}
+                  height={800}
+                  sizes="(max-width: 600px) calc(100vw - 80px), (max-width: 1050px) 42vw, 20vw"
+                />
               </button>
+              <div className="product-photo-note">{product.imageNote}</div>
               <p>{product.note}</p>
               <h3>{product.name}</h3>
               <span className="size">{product.size}</span>
