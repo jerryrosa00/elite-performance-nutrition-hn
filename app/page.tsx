@@ -366,8 +366,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Proteína deportiva y cuchara medidora">
-          <Image src={`${assetBasePath}/hero-protein.jpg`} alt="Bote de proteína deportiva con cuchara medidora" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
+        <div className="hero-visual" aria-label="Atleta entrenando con pesas">
+          <Image src={`${assetBasePath}/hero-athlete.png`} alt="Atleta entrenando con mancuernas y el logo Elite en su camiseta" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
           <div className="hero-gradient" />
           <p className="image-note"><span>01</span> COMBUSTIBLE PARA TU PROGRESO</p>
           <div className="availability"><span /> DISPONIBLE</div>
