@@ -264,6 +264,7 @@ const products = [
 ];
 
 const productLabel = (product: (typeof products)[number]) => `${product.name} — ${product.size}`;
+const consultationCategories = categories.filter((category) => category !== 'Todos');
 
 const goals = [
   { number: '01', title: 'Ganar masa', copy: 'Proteínas y creatina para acompañar tu plan de fuerza.', filter: 'Proteínas' as Category },
@@ -273,15 +274,53 @@ const goals = [
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>('Todos');
-  const [selectedProduct, setSelectedProduct] = useState(productLabel(products[0]));
+  const [selectedConsultationCategory, setSelectedConsultationCategory] = useState('Proteínas');
+  const [selectedProductName, setSelectedProductName] = useState(products[0].name);
+  const [selectedSize, setSelectedSize] = useState(products[0].size);
 
   const filteredProducts = useMemo(
     () => activeCategory === 'Todos' ? products : products.filter((product) => product.category === activeCategory),
     [activeCategory],
   );
 
-  const chooseProduct = (productName: string) => {
-    setSelectedProduct(productName);
+  const consultationProducts = useMemo(
+    () => products.filter((product) => product.category === selectedConsultationCategory),
+    [selectedConsultationCategory],
+  );
+
+  const consultationProductNames = useMemo(
+    () => [...new Set(consultationProducts.map((product) => product.name))],
+    [consultationProducts],
+  );
+
+  const consultationSizes = useMemo(
+    () => consultationProducts
+      .filter((product) => product.name === selectedProductName)
+      .map((product) => product.size),
+    [consultationProducts, selectedProductName],
+  );
+
+  const selectedProduct = consultationProducts.find(
+    (product) => product.name === selectedProductName && product.size === selectedSize,
+  ) ?? consultationProducts[0];
+
+  const updateConsultationCategory = (category: string) => {
+    const productsInCategory = products.filter((product) => product.category === category);
+    setSelectedConsultationCategory(category);
+    setSelectedProductName(productsInCategory[0].name);
+    setSelectedSize(productsInCategory[0].size);
+  };
+
+  const updateConsultationProduct = (name: string) => {
+    const product = consultationProducts.find((item) => item.name === name);
+    setSelectedProductName(name);
+    setSelectedSize(product?.size ?? '');
+  };
+
+  const chooseProduct = (product: (typeof products)[number]) => {
+    setSelectedConsultationCategory(product.category);
+    setSelectedProductName(product.name);
+    setSelectedSize(product.size);
     document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -291,7 +330,7 @@ export default function Home() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hola Elite Performance Nutrition, me interesa ${selectedProduct}. ¿Me ayudan con disponibilidad, sabores y entrega?`,
+    `Hola Elite Performance Nutrition, me interesa ${productLabel(selectedProduct)}. ¿Me ayudan con disponibilidad, sabores y entrega?`,
   );
 
   return (
@@ -366,7 +405,7 @@ export default function Home() {
                 <span className="product-number">{(index + 1).toString().padStart(2, '0')}</span>
                 <span className="product-badge">{product.badge}</span>
               </div>
-              <button className="product-visual" type="button" onClick={() => chooseProduct(productLabel(product))} aria-label={`Consultar ${productLabel(product)}`}>
+              <button className="product-visual" type="button" onClick={() => chooseProduct(product)} aria-label={`Consultar ${productLabel(product)}`}>
                 <Image
                   className="product-photo"
                   src={`${assetBasePath}${product.image}`}
@@ -382,7 +421,7 @@ export default function Home() {
               <span className="size">{product.size}</span>
               <div className="product-footer">
                 <b>{product.price}</b>
-                <button type="button" onClick={() => chooseProduct(productLabel(product))}>Consultar <span>↗</span></button>
+                <button type="button" onClick={() => chooseProduct(product)}>Consultar <span>↗</span></button>
               </div>
             </article>
           ))}
@@ -428,13 +467,29 @@ export default function Home() {
           <p>Seleccioná el producto y prepará tu consulta. Te ayudamos con sabores, disponibilidad y entrega.</p>
         </div>
         <div className="inquiry-card">
-          <label htmlFor="product-select">Producto de interés</label>
-          <select id="product-select" value={selectedProduct} onChange={(event) => setSelectedProduct(event.target.value)}>
-            {products.map((product) => <option key={productLabel(product)} value={productLabel(product)}>{productLabel(product)}</option>)}
-          </select>
+          <div className="inquiry-fields">
+            <div>
+              <label htmlFor="category-select">Tipo de producto</label>
+              <select id="category-select" value={selectedConsultationCategory} onChange={(event) => updateConsultationCategory(event.target.value)}>
+                {consultationCategories.map((category) => <option key={category} value={category}>{category}</option>)}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="product-select">Producto</label>
+              <select id="product-select" value={selectedProductName} onChange={(event) => updateConsultationProduct(event.target.value)}>
+                {consultationProductNames.map((name) => <option key={name} value={name}>{name}</option>)}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="size-select">Tamaño / presentación</label>
+              <select id="size-select" value={selectedSize} onChange={(event) => setSelectedSize(event.target.value)}>
+                {consultationSizes.map((size) => <option key={size} value={size}>{size}</option>)}
+              </select>
+            </div>
+          </div>
           <div className="message-preview">
             <span>Tu mensaje</span>
-            <p>Hola Elite Performance Nutrition, me interesa <b>{selectedProduct}</b>. ¿Me ayudan con disponibilidad, sabores y entrega?</p>
+            <p>Hola Elite Performance Nutrition, me interesa <b>{productLabel(selectedProduct)}</b>. ¿Me ayudan con disponibilidad, sabores y entrega?</p>
           </div>
           <a className="button inquiry-button" href={`https://wa.me/50488203576?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
             Enviar por WhatsApp <span>↗</span>
