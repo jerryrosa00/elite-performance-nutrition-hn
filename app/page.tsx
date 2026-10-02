@@ -337,7 +337,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Elite Performance Nutrition, inicio">
-          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo.png`} alt="" width={46} height={46} /></span>
+          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo-transparent-small.png`} alt="" width={46} height={46} /></span>
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <nav aria-label="Navegación principal">
@@ -513,7 +513,7 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-brand" href="#inicio" aria-label="Elite Performance Nutrition, inicio">
-          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo.png`} alt="" width={46} height={46} /></span>
+          <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo-transparent-small.png`} alt="" width={46} height={46} /></span>
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <p>Suplementos para entrenar, rendir y recuperarte.</p>
