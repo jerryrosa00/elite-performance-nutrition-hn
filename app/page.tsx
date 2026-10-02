@@ -55,7 +55,7 @@ const products = [
     "badge": "Consultar stock",
     "image": "/products/product-04.webp",
     "imageAlt": "Foto de referencia de Proteina Body Fortress",
-    "imageNote": "Foto: envase de 1.78 lb. Consultá la presentación de 6 lb."
+    "imageNote": "Foto: envase de 1.78 lb. Consulte la presentación de 6 lb."
   },
   {
     "name": "Proteina 1 Rule Isolatada",
@@ -79,7 +79,7 @@ const products = [
     "badge": "Consultar stock",
     "image": "/products/product-06.webp",
     "imageAlt": "Foto de referencia de Proteina 1 Rule Vegetal",
-    "imageNote": "Foto: envase de 1.48 lb. Confirmá la presentación disponible."
+    "imageNote": "Foto: envase de 1.48 lb. Confirme la presentación disponible."
   },
   {
     "name": "Proteina gold standard Mass Gainer",
@@ -91,7 +91,7 @@ const products = [
     "badge": "Consultar stock",
     "image": "/products/product-07.webp",
     "imageAlt": "Foto de referencia de Proteina gold standard Mass Gainer",
-    "imageNote": "Foto: envase de 5 lb. Confirmá el modelo y la presentación de 6 lb."
+    "imageNote": "Foto: envase de 5 lb. Confirme el modelo y la presentación de 6 lb."
   },
   {
     "name": "Pre Entreno C4 Ripedd",
@@ -163,7 +163,7 @@ const products = [
     "badge": "Consultar stock",
     "image": "/products/product-13.webp",
     "imageAlt": "Foto de referencia de Magnecio Citrato Now",
-    "imageNote": "Foto: 90 cápsulas blandas. Confirmá la presentación de 120."
+    "imageNote": "Foto: 90 cápsulas blandas. Confirme la presentación de 120."
   },
   {
     "name": "Zinc Gluconato Now",
@@ -211,7 +211,7 @@ const products = [
     "badge": "Consultar stock",
     "image": "/products/product-17.webp",
     "imageAlt": "Foto de referencia de Multi Vitaminas Opti Women",
-    "imageNote": "Foto: 60 cápsulas. Confirmá la presentación disponible."
+    "imageNote": "Foto: 60 cápsulas. Confirme la presentación disponible."
   },
   {
     "name": "Amino Energized",
@@ -330,7 +330,7 @@ export default function Home() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hola Elite Performance Nutrition, me interesa ${productLabel(selectedProduct)}. ¿Me ayudan con disponibilidad, sabores y entrega?`,
+    `Hola Elite Performance Nutrition, me interesa ${productLabel(selectedProduct)}. ¿Podrían ayudarme con disponibilidad, sabores y entrega?`,
   );
 
   return (
@@ -342,7 +342,7 @@ export default function Home() {
         </a>
         <nav aria-label="Navegación principal">
           <a href="#catalogo">Productos</a>
-          <a href="#objetivos">Tu objetivo</a>
+          <a href="#objetivos">Objetivos</a>
           <a href="#nosotros">Nosotros</a>
         </nav>
         <a className="button button-small" href="#contacto">Consultar</a>
@@ -351,9 +351,9 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-copy">
           <p className="eyebrow"><span /> SUPLEMENTOS ORIGINALES · HONDURAS</p>
-          <h1>Elevá tu<br />rendimiento.<br /><strong>Sin límites.</strong></h1>
+          <h1>Eleve su<br />rendimiento.<br /><strong>Sin límites.</strong></h1>
           <p className="hero-description">
-            Proteína, creatina y esenciales seleccionados para que entrenés con intención y recuperés mejor.
+            Proteína, creatina y productos esenciales seleccionados para que entrene con intención y se recupere mejor.
           </p>
           <div className="hero-actions">
             <a className="button" href="#catalogo">Ver productos <span>↗</span></a>
@@ -380,7 +380,7 @@ export default function Home() {
             <p className="eyebrow dark"><span /> NUESTRO CATÁLOGO</p>
             <h2>Lo que necesitás.<br /><i>Sin complicaciones.</i></h2>
           </div>
-          <p className="catalog-note">Precios en lempiras (HNL). Consultá disponibilidad y sabores. Las fotos son de referencia; el sabor y el empaque pueden variar.</p>
+          <p className="catalog-note">Precios en lempiras (HNL). Consulte disponibilidad y sabores. Las fotografías son de referencia; el sabor y el empaque pueden variar.</p>
         </div>
 
         <div className="filter-bar" role="group" aria-label="Filtrar productos">
@@ -430,8 +430,8 @@ export default function Home() {
 
       <section className="goals" id="objetivos">
         <div className="goals-heading">
-          <p className="eyebrow"><span /> ELEGÍ SEGÚN TU META</p>
-          <h2>No comprés por moda.<br /><strong>Comprá para tu objetivo.</strong></h2>
+          <p className="eyebrow"><span /> ELIJA SEGÚN SU META</p>
+          <h2>No compre por moda.<br /><strong>Compre para su objetivo.</strong></h2>
         </div>
         <div className="goal-list">
           {goals.map((goal) => (
@@ -448,14 +448,14 @@ export default function Home() {
       <section className="about" id="nosotros">
         <div className="about-quote">
           <p className="eyebrow dark"><span /> POR QUÉ ELITE</p>
-          <blockquote>“No vendemos promesas. Te ayudamos a elegir lo que <em>sí tiene sentido</em> para tu meta.”</blockquote>
+          <blockquote>“No vendemos promesas. Le ayudamos a elegir lo que <em>sí tiene sentido</em> para su objetivo.”</blockquote>
         </div>
         <div className="buying-steps">
           <h2>Comprar es simple</h2>
           <ol>
-            <li><span>01</span><div><b>Elegí</b><p>Revisá el catálogo y encontrá lo que buscás.</p></div></li>
-            <li><span>02</span><div><b>Consultá</b><p>Escribinos para confirmar stock, sabor y entrega.</p></div></li>
-            <li><span>03</span><div><b>Recibí</b><p>Coordinamos tu envío en Honduras.</p></div></li>
+            <li><span>01</span><div><b>Elija</b><p>Revise el catálogo y encuentre lo que busca.</p></div></li>
+            <li><span>02</span><div><b>Consulte</b><p>Escríbanos para confirmar existencias, sabor y entrega.</p></div></li>
+            <li><span>03</span><div><b>Reciba</b><p>Coordinamos su envío en Honduras.</p></div></li>
           </ol>
         </div>
       </section>
@@ -464,7 +464,7 @@ export default function Home() {
         <div className="contact-copy">
           <p className="eyebrow"><span /> HABLEMOS</p>
           <h2>¿Listo para dar<br /><strong>el siguiente paso?</strong></h2>
-          <p>Seleccioná el producto y prepará tu consulta. Te ayudamos con sabores, disponibilidad y entrega.</p>
+          <p>Seleccione el producto y prepare su consulta. Le ayudamos con sabores, disponibilidad y entrega.</p>
         </div>
         <div className="inquiry-card">
           <div className="inquiry-fields">
@@ -489,7 +489,7 @@ export default function Home() {
           </div>
           <div className="message-preview">
             <span>Tu mensaje</span>
-            <p>Hola Elite Performance Nutrition, me interesa <b>{productLabel(selectedProduct)}</b>. ¿Me ayudan con disponibilidad, sabores y entrega?</p>
+            <p>Hola Elite Performance Nutrition, me interesa <b>{productLabel(selectedProduct)}</b>. ¿Podrían ayudarme con disponibilidad, sabores y entrega?</p>
           </div>
           <a className="button inquiry-button" href={`https://wa.me/50488203576?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
             Enviar por WhatsApp <span>↗</span>
@@ -504,9 +504,9 @@ export default function Home() {
           <h2 id="faq-title">Lo esencial,<br />antes de comprar.</h2>
         </div>
         <div className="faq-list">
-          <details><summary>¿Los productos son originales?<span>+</span></summary><p>Sí. Trabajamos con producto sellado y de proveedores confiables. Consultá por la marca y presentación disponible.</p></details>
+          <details><summary>¿Los productos son originales?<span>+</span></summary><p>Sí. Trabajamos con productos sellados y proveedores confiables. Consulte por la marca y la presentación disponible.</p></details>
           <details><summary>¿Hacen envíos fuera de Tegucigalpa?<span>+</span></summary><p>Sí, coordinamos envíos nacionales. El costo y tiempo dependen de tu ciudad y del método de entrega.</p></details>
-          <details><summary>¿Me pueden ayudar a elegir?<span>+</span></summary><p>Claro. Contanos tu objetivo, experiencia y rutina para orientarte entre las opciones disponibles.</p></details>
+          <details><summary>¿Pueden ayudarme a elegir?<span>+</span></summary><p>Con gusto. Indíquenos su objetivo, experiencia y rutina para orientarle entre las opciones disponibles.</p></details>
           <details><summary>¿Los precios pueden cambiar?<span>+</span></summary><p>El catálogo muestra precios de referencia. Confirmamos el precio final y disponibilidad antes de coordinar tu pedido.</p></details>
         </div>
       </section>
@@ -516,7 +516,7 @@ export default function Home() {
           <span className="brand-logo"><Image src={`${assetBasePath}/elite-logo-transparent-small.png`} alt="" width={46} height={46} /></span>
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
-        <p>Suplementos para entrenar, rendir y recuperarte.</p>
+        <p>Suplementos para entrenar, rendir y recuperarse.</p>
         <div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/elite.nutritionhn/" target="_blank" rel="noreferrer">Instagram @elite.nutritionhn</a><a href="#inicio">Volver arriba ↑</a></div>
         <small>© 2026 Elite Performance Nutrition · Honduras</small>
       </footer>
