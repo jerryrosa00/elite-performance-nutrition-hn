@@ -378,7 +378,7 @@ export default function Home() {
         <div className="catalog-heading">
           <div>
             <p className="eyebrow dark"><span /> NUESTRO CATÁLOGO</p>
-            <h2>Lo que necesitás.<br /><i>Sin complicaciones.</i></h2>
+            <h2>Lo que necesitas.<br /><i>Sin complicaciones.</i></h2>
           </div>
           <p className="catalog-note">Precios en lempiras (HNL). Consulte disponibilidad y sabores. Las fotografías son de referencia; el sabor y el empaque pueden variar.</p>
         </div>
@@ -448,7 +448,7 @@ export default function Home() {
       <section className="about" id="nosotros">
         <div className="about-quote">
           <p className="eyebrow dark"><span /> POR QUÉ ELITE</p>
-          <blockquote>“No vendemos promesas. Le ayudamos a elegir lo que <em>sí tiene sentido</em> para su objetivo.”</blockquote>
+          <blockquote>“No vendemos promesas. Te ayudamos a elegir lo que <em>sí tiene sentido</em> para tu objetivo.”</blockquote>
         </div>
         <div className="buying-steps">
           <h2>Comprar es simple</h2>
@@ -463,7 +463,7 @@ export default function Home() {
       <section className="contact" id="contacto">
         <div className="contact-copy">
           <p className="eyebrow"><span /> HABLEMOS</p>
-          <h2>¿Listo para dar<br /><strong>el siguiente paso?</strong></h2>
+          <h2>Listo para dar<br /><strong>el siguiente paso.</strong></h2>
           <p>Seleccione el producto y prepare su consulta. Le ayudamos con sabores, disponibilidad y entrega.</p>
         </div>
         <div className="inquiry-card">
@@ -505,7 +505,7 @@ export default function Home() {
         </div>
         <div className="faq-list">
           <details><summary>¿Los productos son originales?<span>+</span></summary><p>Sí. Trabajamos con productos sellados y proveedores confiables. Consulte por la marca y la presentación disponible.</p></details>
-          <details><summary>¿Hacen envíos fuera de Tegucigalpa?<span>+</span></summary><p>Sí, coordinamos envíos nacionales. El costo y tiempo dependen de tu ciudad y del método de entrega.</p></details>
+          <details><summary>¿Realizan envíos a otras ciudades?<span>+</span></summary><p>Sí, podemos realizar envíos a otras ciudades. El costo y tiempo dependen de su ubicación y del método de entrega.</p></details>
           <details><summary>¿Pueden ayudarme a elegir?<span>+</span></summary><p>Con gusto. Indíquenos su objetivo, experiencia y rutina para orientarle entre las opciones disponibles.</p></details>
           <details><summary>¿Los precios pueden cambiar?<span>+</span></summary><p>El catálogo muestra precios de referencia. Confirmamos el precio final y disponibilidad antes de coordinar tu pedido.</p></details>
         </div>
