@@ -264,6 +264,7 @@ const products = [
 ];
 
 const productLabel = (product: (typeof products)[number]) => `${product.name} — ${product.size}`;
+const productImageUrl = (product: (typeof products)[number]) => `https://jerryrosa00.github.io/elite-performance-nutrition-hn${product.image}`;
 const consultationCategories = categories.filter((category) => category !== 'Todos');
 
 const goals = [
@@ -330,7 +331,7 @@ export default function Home() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hola Elite Performance Nutrition, me interesa ${productLabel(selectedProduct)}. ¿Podrían ayudarme con disponibilidad, sabores y entrega?`,
+    `Hola Elite Performance Nutrition, me interesa ${productLabel(selectedProduct)}. ¿Podrían ayudarme con disponibilidad, sabores y entrega?\n\nImagen del producto: ${productImageUrl(selectedProduct)}`,
   );
 
   return (
@@ -414,6 +415,7 @@ export default function Home() {
                   height={800}
                   sizes="(max-width: 600px) calc(100vw - 80px), (max-width: 1050px) 42vw, 20vw"
                 />
+                <span className="product-hover-hint">Vista previa</span>
               </button>
               <div className="product-photo-note">{product.imageNote}</div>
               <p>{product.note}</p>
@@ -487,9 +489,13 @@ export default function Home() {
               </select>
             </div>
           </div>
+          <div className="consultation-product-preview">
+            <Image src={`${assetBasePath}${selectedProduct.image}`} alt={selectedProduct.imageAlt} width={120} height={120} sizes="120px" />
+            <div><span>Producto seleccionado</span><b>{productLabel(selectedProduct)}</b></div>
+          </div>
           <div className="message-preview">
             <span>Tu mensaje</span>
-            <p>Hola Elite Performance Nutrition, me interesa <b>{productLabel(selectedProduct)}</b>. ¿Podrían ayudarme con disponibilidad, sabores y entrega?</p>
+            <p>Hola Elite Performance Nutrition, me interesa <b>{productLabel(selectedProduct)}</b>. ¿Podrían ayudarme con disponibilidad, sabores y entrega? La imagen del producto se incluirá en el mensaje.</p>
           </div>
           <a className="button inquiry-button" href={`https://wa.me/50488203576?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
             Enviar por WhatsApp <span>↗</span>
