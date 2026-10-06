@@ -71,9 +71,11 @@ a { color: inherit; text-decoration: none; }
 .card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .product-number { color: #73787d; font-size: 12px; letter-spacing: .1em; }
 .product-badge { padding: 6px 9px; border-radius: 99px; background: #f4efdf; color: #655024; font-size: 12px; }
-.product-visual { width: 100%; aspect-ratio: 1; padding: 0; margin: 10px 0; border: 0; border-radius: 8px; background: #fff; display: grid; place-items: center; cursor: pointer; }
+.product-visual { position: relative; width: 100%; aspect-ratio: 1; padding: 0; margin: 10px 0; border: 0; border-radius: 8px; background: #fff; display: grid; place-items: center; cursor: pointer; overflow: hidden; }
 .product-photo { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; transition: transform .25s; }
-.product-visual:hover .product-photo { transform: translateY(-4px) scale(1.025); }
+.product-visual:hover .product-photo { transform: translateY(-4px) scale(1.08); }
+.product-hover-hint { position: absolute; right: 10px; bottom: 10px; padding: 7px 9px; background: rgba(17,18,20,.86); color: #fff; font-size: 10px; font-weight: 750; letter-spacing: .06em; opacity: 0; transform: translateY(6px); transition: opacity .2s, transform .2s; }
+.product-visual:hover .product-hover-hint, .product-visual:focus-visible .product-hover-hint { opacity: 1; transform: translateY(0); }
 .product-visual:focus-visible, .product-footer button:focus-visible { outline: 2px solid #866323; outline-offset: 4px; }
 .product-photo-note { min-height: 52px; margin: 0 0 12px; color: #676159; font-size: 12px; line-height: 1.45; }
 .product-card > p { margin: 0 0 8px; color: #727679; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
@@ -118,6 +120,11 @@ a { color: inherit; text-decoration: none; }
 .inquiry-card label { display: block; margin-bottom: 9px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
 .inquiry-card select { width: 100%; height: 54px; padding: 0 14px; border: 1px solid var(--line); border-radius: 0; background: #fff; color: var(--ink); font-weight: 750; }
 .inquiry-card select:focus-visible { outline: 2px solid #866323; outline-offset: 2px; }
+.consultation-product-preview { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding: 12px; border: 1px solid var(--line); background: #fff; }
+.consultation-product-preview img { width: 76px; height: 76px; object-fit: contain; }
+.consultation-product-preview div { display: grid; gap: 5px; }
+.consultation-product-preview span { color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.consultation-product-preview b { font-size: 13px; line-height: 1.35; }
 .message-preview { margin: 16px 0; padding: 18px; border: 1px solid var(--line); background: #e0e4e6; }
 .message-preview span { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
 .message-preview p { margin: 9px 0 0; font-size: 12px; line-height: 1.6; }
