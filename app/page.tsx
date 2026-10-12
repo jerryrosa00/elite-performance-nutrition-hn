@@ -48,14 +48,14 @@ const products = [
   {
     "name": "Proteina Body Fortress",
     "category": "Proteínas",
-    "size": "6 Lbs.",
-    "price": "L 3,000",
+    "size": "2 Lbs.",
+    "price": "L 1,600",
     "tone": "blue",
     "note": "Proteínas",
     "badge": "Consultar stock",
     "image": "/products/product-04.webp",
     "imageAlt": "Foto de referencia de Proteina Body Fortress",
-    "imageNote": "Foto: envase de 1.78 lb. Consulte la presentación de 6 lb."
+    "imageNote": null
   },
   {
     "name": "Proteina 1 Rule Isolatada",
