@@ -47,8 +47,8 @@ a { color: inherit; text-decoration: none; }
 .trust-row div { display: flex; flex-direction: column; gap: 5px; }
 .trust-row b { color: var(--lime); font-size: 18px; }
 .trust-row span { color: #83847d; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
-.hero-visual { position: relative; min-height: 600px; overflow: hidden; }
-.hero-visual img { object-fit: cover; object-position: center top; filter: saturate(.75) contrast(1.08); }
+.hero-visual { position: relative; min-height: 600px; overflow: hidden; background: #171513; }
+.hero-visual img { object-fit: contain; object-position: center center; filter: saturate(.75) contrast(1.08); }
 .hero-gradient { position: absolute; inset: 0; background: linear-gradient(90deg, #111214 0%, transparent 18%), linear-gradient(0deg, rgba(0,0,0,.62), transparent 45%), linear-gradient(135deg, rgba(209,177,109,.16), transparent 42%); }
 .image-note { position: absolute; left: 36px; bottom: 31px; margin: 0; font-size: 10px; letter-spacing: .14em; }
 .image-note span { color: var(--lime); margin-right: 18px; }
