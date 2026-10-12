@@ -264,7 +264,7 @@ const products = [
 ];
 
 const productLabel = (product: (typeof products)[number]) => `${product.name} — ${product.size}`;
-const productImageUrl = (product: (typeof products)[number]) => `https://jerryrosa00.github.io/elite-performance-nutrition-hn${product.image}`;
+const productImageUrl = (product: (typeof products)[number]) => `https://elitenutritionhn.com${product.image}`;
 const consultationCategories = categories.filter((category) => category !== 'Todos');
 
 const goals = [
