@@ -523,7 +523,7 @@ export default function Home() {
           <span>ELITE PERFORMANCE <em>NUTRITION</em></span>
         </a>
         <p>Suplementos para entrenar, rendir y recuperarse.</p>
-        <div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/elite.nutritionhn/" target="_blank" rel="noreferrer">Instagram @elite.nutritionhn</a><a href="#inicio">Volver arriba ↑</a></div>
+        <div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a><a href="https://www.instagram.com/elite.nutritionhn/" target="_blank" rel="noreferrer">Instagram @elite.nutritionhn</a><a href="https://www.facebook.com/EliteNutricio" target="_blank" rel="noreferrer">Facebook ELITE Nutricion</a><a href="#inicio">Volver arriba ↑</a></div>
         <small>© 2026 Elite Performance Nutrition · Honduras</small>
       </footer>
 
