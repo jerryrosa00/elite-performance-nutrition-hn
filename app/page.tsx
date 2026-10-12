@@ -368,7 +368,7 @@ export default function Home() {
         </div>
 
         <div className="hero-visual" aria-label="Atleta entrenando con pesas">
-          <Image src={`${assetBasePath}/hero-athlete-friendly.jpg`} alt="Atleta sonriente en el gimnasio con el logo Elite en su camiseta" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
+          <Image src={`${assetBasePath}/hero-athlete-wide.jpg`} alt="Atleta sonriente en el gimnasio con el logo Elite en su camiseta" fill priority sizes="(max-width: 900px) 100vw, 46vw" />
           <div className="hero-gradient" />
           <p className="image-note"><span>01</span> COMBUSTIBLE PARA TU PROGRESO</p>
           <div className="availability"><span /> DISPONIBLE</div>
