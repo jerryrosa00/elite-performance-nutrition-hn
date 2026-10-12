@@ -160,7 +160,7 @@ footer > small { justify-self: end; align-self: end; color: #62635e; font-size: 
   .site-header nav { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-copy { min-height: 680px; padding-top: 132px; }
-  .hero-visual { min-height: 530px; }
+  .hero-visual { min-height: 0; aspect-ratio: 16 / 9; }
   .catalog-heading, .goals-heading { display: block; }
   .catalog-note { margin-top: 25px; }
   .goals h2 { text-align: left; }
@@ -179,7 +179,9 @@ footer > small { justify-self: end; align-self: end; color: #62635e; font-size: 
   .text-link { text-align: center; }
   .trust-row { grid-template-columns: 1fr 1fr; margin-top: 42px; }
   .trust-row div:last-child { display: none; }
-  .hero-visual { min-height: 430px; }
+  .hero-visual { aspect-ratio: 4 / 3; }
+  .hero-visual img { object-fit: cover; object-position: center center; }
+  .image-note { left: 20px; bottom: 20px; font-size: 9px; }
   .availability { top: 28px; }
   .catalog, .goals, .contact, .faq { padding-left: 20px; padding-right: 20px; }
   .catalog { padding-top: 72px; }
