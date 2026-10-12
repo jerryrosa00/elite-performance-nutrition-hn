@@ -173,20 +173,26 @@ footer > small { justify-self: end; align-self: end; color: #62635e; font-size: 
 @media (max-width: 600px) {
   .site-header { height: 68px; padding: 0 18px; }
   .button-small { display: none; }
-  .hero-copy { padding: 115px 20px 36px; min-height: 650px; }
-  .hero h1 { font-size: 50px; }
+  /* Keep the athlete visible on arrival and fade the photo into the copy. */
+  .hero { display: block; position: relative; isolation: isolate; min-height: 0; }
+  .hero-copy { padding: calc(68px + min(90vw, 380px)) 20px 32px; min-height: 0; z-index: 1; }
+  .hero-copy::after { display: none; }
+  .hero .eyebrow { margin-bottom: 16px; font-size: 8px; letter-spacing: .12em; }
+  .hero h1 { font-size: clamp(32px, 9.4vw, 50px); line-height: 1; }
+  .hero-description { margin-top: 20px; font-size: 14px; line-height: 1.6; }
+  .hero-actions { margin-top: 24px; }
   .hero-actions { align-items: stretch; flex-direction: column; gap: 8px; }
   .text-link { text-align: center; }
-  .trust-row { grid-template-columns: 1fr 1fr; margin-top: 42px; }
+  .trust-row { grid-template-columns: 1fr 1fr; margin-top: 24px; padding-top: 20px; }
   .trust-row div:last-child { display: none; }
-  .hero-visual { aspect-ratio: 4 / 3; }
+  .hero-visual { position: absolute; inset: 68px 0 auto; height: min(105vw, 440px); min-height: 0; aspect-ratio: auto; z-index: 0; }
+  .hero-gradient { background: linear-gradient(0deg, #111214 0%, rgba(17,18,20,.85) 12%, transparent 48%); }
   .hero-visual img { object-fit: cover; object-position: center center; }
-  .image-note { left: 20px; bottom: 20px; font-size: 9px; }
-  .availability { top: 28px; }
+  .image-note, .availability { display: none; }
   .catalog, .goals, .contact, .faq { padding-left: 20px; padding-right: 20px; }
   .catalog { padding-top: 72px; }
   .catalog-heading { margin-bottom: 38px; }
-  .catalog h2, .goals h2, .contact h2, .faq h2 { font-size: 39px; }
+  .catalog h2, .goals h2, .contact h2, .faq h2 { font-size: clamp(30px, 8.5vw, 39px); }
   .filter-bar { overflow-x: auto; padding-bottom: 14px; }
   .filter-bar button { white-space: nowrap; }
   .filter-bar > span { display: none; }
@@ -198,7 +204,7 @@ footer > small { justify-self: end; align-self: end; color: #62635e; font-size: 
   .goals { padding-top: 78px; }
   .goals-heading { padding-bottom: 46px; }
   .goal-list button { grid-template-columns: 30px 1fr 28px; gap: 13px; }
-  .goal-list h3 { font-size: 31px; }
+  .goal-list h3 { font-size: clamp(25px, 7.5vw, 31px); }
   .about-quote { padding: 80px 20px; }
   .about-quote blockquote { font-size: 38px; }
   .buying-steps { padding: 70px 20px; }
@@ -208,7 +214,7 @@ footer > small { justify-self: end; align-self: end; color: #62635e; font-size: 
   footer { padding: 50px 20px 85px; grid-template-columns: 1fr; }
   footer > p, footer > small { justify-self: start; }
   footer > div { flex-wrap: wrap; }
-  .floating-inquiry { display: flex; align-items: center; justify-content: space-between; position: fixed; z-index: 20; left: 14px; right: 14px; bottom: 13px; padding: 15px 18px; background: var(--lime); color: var(--ink); box-shadow: 0 10px 30px rgba(0,0,0,.28); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; }
+  .floating-inquiry { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
