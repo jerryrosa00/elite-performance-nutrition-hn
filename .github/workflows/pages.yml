@@ -41,8 +41,7 @@ jobs:
       - name: Build static website
         env:
           GITHUB_ACTIONS: 'true'
-          NEXT_PUBLIC_BASE_PATH: /elite-performance-nutrition-hn
-          NEXT_PUBLIC_SITE_URL: https://jerryrosa00.github.io/elite-performance-nutrition-hn
+          NEXT_PUBLIC_SITE_URL: https://elitenutritionhn.com
         run: pnpm run build:pages
 
       - name: Upload website artifact
